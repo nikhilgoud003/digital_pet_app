@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 1,
+        length: 2,
         child: _TabsNonScrollableDemo(),
       ),
     );
@@ -41,7 +41,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
     super.initState();
     _tabController = TabController(
       initialIndex: 0,
-      length: 1,
+      length: 2,
       vsync: this,
     );
     _tabController.addListener(() {
@@ -61,7 +61,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
   @override
   Widget build(BuildContext context) {
 // For the ToDo task hint: consider defining the widget and name of the tabs here
-    final tabs = ['Tab 1'];
+    final tabs = ['Tab 1', 'Tab2'];
 
     return Scaffold(
       appBar: AppBar(
@@ -82,6 +82,9 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
         children: [
           Center(
             child: Text('Dog'),
+          ),
+          Center(
+            child: Text('Cat'),
           )
         ],
       ),
